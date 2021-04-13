@@ -3,6 +3,7 @@
 
 A fully automated plant growth system with watering (based on soil moisture content), temperature control and lights. The final goal of this project is to create a system that could fully grow a plant without any additional outside input. The most important control is water (because light and temperature can be controlled simply by putting the plant near a window). The project is easily scalable and modular. It can accommodate more (or less) soil moisture sensors and/or temperature control units. 
 This project was inspired by my own inability to keep plants properly watered. Hopefully allocating this task to my MechaGardenzilla will give my plants a better shot at life.  
+
 **DISCLAIMER**
 I am not an electrical engineer or botanist. I take no responsibility for any harm that may come to person, property or botany as a result of this project.
 
@@ -19,23 +20,36 @@ I am not an electrical engineer or botanist. I take no responsibility for any ha
 **BUILD**
 
 Relay VCC to board 5V
+
 Relay GND to GND
+
 Relay 1 common to 5V
+
 Relay 1 NO to Pump 5V
+
 Relay 2 common to 5V
+
 Relay 2 NO to DC fan
 
 Pin 2 to relay IN1
+
 Pin 3 to relay IN2
+
 Pin 13 to float pump 
 
 Soil moisture(SM) VCC to 5V
 SM GND to GND
+
 SM AOUT to A0
 
+
 TMP 5V to 5V
+
 TMP GND to GND
+
 TMP analog (middle pin) to A1
+
+![CS207 Final Project_bb](https://user-images.githubusercontent.com/78987271/114496442-2bcf0f80-9bdd-11eb-9101-6dcf0127cf9d.jpg)
 
 
 
@@ -45,7 +59,9 @@ The system’s watering control functions well. When the soil moisture sensor de
 The temperature sensor reads ambient temperature and turns on the DC fan when a certain temperature level is exceeded (set beforehand in the program, in degrees Celsius). The fan turns off when desired temperature is reached. 
 The two modules mesh well together. Both will run independently or at the same time (ex. Pump will run while fan is on). The temperature control module will continue to run after the float switch stops the pump from running. 
 An enclosure for the system/plants has not been built yet, so the temperature control unit is not very useful at this point. Though the fan does work, it is not powerful enough to change the temperature of an entire room. This module would be more useful in a future, entirely enclosed build. Temperature control can also help offset excess heat caused by growing lights. 
+
 Version 4.0 code has more controls integrated in the main void Loop() function. The initial goal was to have all module running as separate functions, to make the code more modular. However, this did not prove to work well in practice. The Version 4.0 code has a separate function to run the pump, but the rest of the controls are in the main body of the code. However, the temperature and soil moisture controls are separate in the body of the code, and the whole system will still run smoothly with the removal of one portion, making the build modular. Adding more SM or TMP sensors is as simple as declaring new pins for the analog sensors and relay control, and the copying the necessary code and changing the variables for the added sensor/relay. 
+
 
 Version 4.0: Moisture control and temperature control work smoothly together. 
 
@@ -76,6 +92,8 @@ Soil Moisture Module
 The soil moisture module measures the moisture content of the plant’s soil. It does this by testing resistivity across the board. Wet soil is less resistive (because water is conductive) than dry soil. The Soil moisture sensor is connected to analog pin A0. The sensor generally seems to give readings between 250 (sensor in water, max moisture content/conductivity) and 700 (dry sensor in the air, max resistivity). For this build, I did not map the values, and instead chose to make my threshold value based on the analog values that have been returned. 
 To water the plant, a relay board is used, controlling a DC pump. Relay boards can be used to mechanically control larger voltages than the Arduino can typically handle. In a relay, a positive wire is run into the relay’s common port and then into either the “Normally Open” or “Normally Closed” ports of the relay. To control voltage, a digital signal is sent to the pins on the relay board. In this build, the pump relay is controlled by digital Pin 2. Then, the relay board sends a signal to either open or close the circuit. This will provide power (or stop providing power) to any device that is connected to the relay’s higher voltage wires. For this build I used a four channel relay, so it can control four devices (and potentially current from four different sources) at once. The DC pump that I used in this build is only rated for 5V, so an additional power source was not needed for the relay, and the pump run off of the Arduino’s 5V pin. 
  
+ ![Relay example annotated](https://user-images.githubusercontent.com/78987271/114496421-2245a780-9bdd-11eb-951f-96e0e2d9e92d.jpg)
+
 A float switch is used to control the water level, stopping the pump from running if the water reservoir is empty. The float switch is simply a piece of floating foam with an integrated magnet, which gives a digital signal (so it is attached to digital Pin 13). When the float is floating (or up), the senor gives a “HIGH” output. If the float drops to the bottom of the sensor, it gives a “LOW” output (indicating that the water level has dropped).
 
 Temperature Control Module
