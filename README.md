@@ -2,15 +2,19 @@
 This is an Arduino controlled plant growth system
 
 **AIM OF PROJECT**
+
 A fully automated plant growth system with watering (based on soil moisture content), temperature control and lights. The final goal of this project is to create a system that could fully grow a plant without any additional outside input. The most important control is water (because light and temperature can be controlled simply by putting the plant near a window). The project is easily scalable and can accomodate more soil moisture sensors and/or temperature control units. 
 
-**Repository Contents**
+**Repository Contents*
+
 /README.md -ReadMe document explaining the build
 /hardware - Fritzing schematic for build
 /Code - Archived previous versions of code
 /
 
 **BUILD**
+Quick Instructions
+
 Relay VCC to board 5V
 Relay GND to GND
 Relay 1 common to 5V
@@ -30,7 +34,16 @@ TMP 5V to 5V
 TMP GND to GND
 TMP analog (middle pin) to A1
 
+Extended Instructions
+
+Analog Pins
+
+
+Relay Board
+
+
 **FUNCTIONALITY**
+
 Version 2.0: Working pump and float sensor
 
 Version 3.0: Most experimenting was done with this version. Attempted to use all commands as functions. Moisture sensor and pump work well but modules do not interface properly. 
@@ -38,6 +51,7 @@ Version 3.0: Most experimenting was done with this version. Attempted to use all
 Version 4.0: Moisture control and temperature control work smoothly together. 
 
 **HARDWARE**
+
 1 X Arduino Uno board
 1 X 4 channel relay
 1 X Soil moisture sensor
@@ -52,6 +66,7 @@ Jumper cables (generic)
 1 X Sad plant in need of TCL
 
 **Building the Plant Growth System**
+
 Soil Moisture Module
 1. Connect the SM 5V to power, GND to ground and AOUT (yellow wire) to A0. 
 2. Connect relay VVC to 5V, GND to ground and IN1 to digital Pin 2. 
