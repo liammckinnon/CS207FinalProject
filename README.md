@@ -6,7 +6,7 @@ This project was inspired by my own inability to keep plants properly watered. H
 
 **DISCLAIMER**
 
-I am not an electrical engineer or botanist. I take no responsibility for any harm that may come to person, property or botany as a result of this project.
+I am not an electrical engineer or botanist. I take no responsibility for any harm that may come to person, property or plant as a result of this project.
 
 
 **Version Information**
