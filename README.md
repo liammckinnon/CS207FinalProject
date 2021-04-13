@@ -5,19 +5,20 @@ A fully automated plant growth system with watering (based on soil moisture cont
 This project was inspired by my own inability to keep plants properly watered. Hopefully allocating this task to my MechaGardenzilla will give my plants a better shot at life.  
 
 **DISCLAIMER**
+
 I am not an electrical engineer or botanist. I take no responsibility for any harm that may come to person, property or botany as a result of this project.
 
 
 
 **Repository Contents*
 
-/README.md -ReadMe document explaining the build
+*/README.md -ReadMe document explaining the build
 
-/hardware - Fritzing schematic for build
+*/hardware - Fritzing schematic for build and parts list
 
-/images – Pictures of the build
+*/images – Pictures of the build
 
-/Code - Archived previous versions of code
+*/Code - Archived previous versions of code
 
 
 
