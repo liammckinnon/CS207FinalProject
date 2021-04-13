@@ -12,10 +12,14 @@ I am not an electrical engineer or botanist. I take no responsibility for any ha
 **Repository Contents*
 
 /README.md -ReadMe document explaining the build
+
 /hardware - Fritzing schematic for build
+
 /images – Pictures of the build
+
 /Code - Archived previous versions of code
-/
+
+
 
 **BUILD**
 
@@ -82,6 +86,8 @@ Version 2.0: Working pump and float sensor
 •	Jumper cables (generic)
 
 •	1 X Sad plant in need of TCL
+
+
 I bought the soil moisture sensor, relay board and pump as a kit. It is available from the following link:
 https://www.amazon.ca/WayinTop-Automatic-Irrigation-Watering-Capacitive/dp/B07WS71JC1/ref=sr_1_10?dchild=1&keywords=arduino+plant+watering&qid=1618285295&sr=8-10
 
