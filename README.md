@@ -85,6 +85,7 @@ Version 2.0: Working pump and float sensor
 •	1 X TMP36GZ
 •	1 X DC Fan
 •	Jumper cables (generic)
+• 1 X Float switch (Amazon)
 
 •	1 X Sad plant in need of TCL
 
