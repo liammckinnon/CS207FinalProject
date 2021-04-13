@@ -81,6 +81,7 @@ Version 4.0 code has more controls integrated in the main void Loop() function. 
 Version 4.0: Moisture control and temperature control work smoothly together. 
 
 Version 3.0: Most experimenting was done with this version. Attempted to use all commands as functions. Moisture sensor and pump work well but modules do not interface properly. 
+
 Version 2.0: Working pump and float sensor
 
 **HARDWARE**
@@ -107,7 +108,9 @@ https://www.amazon.ca/WayinTop-Automatic-Irrigation-Watering-Capacitive/dp/B07WS
 **Building the Plant Growth System**
 
 Soil Moisture Module
+
 The soil moisture module measures the moisture content of the plant’s soil. It does this by testing resistivity across the board. Wet soil is less resistive (because water is conductive) than dry soil. The Soil moisture sensor is connected to analog pin A0. The sensor generally seems to give readings between 250 (sensor in water, max moisture content/conductivity) and 700 (dry sensor in the air, max resistivity). For this build, I did not map the values, and instead chose to make my threshold value based on the analog values that have been returned. 
+
 To water the plant, a relay board is used, controlling a DC pump. Relay boards can be used to mechanically control larger voltages than the Arduino can typically handle. In a relay, a positive wire is run into the relay’s common port and then into either the “Normally Open” or “Normally Closed” ports of the relay. To control voltage, a digital signal is sent to the pins on the relay board. In this build, the pump relay is controlled by digital Pin 2. Then, the relay board sends a signal to either open or close the circuit. This will provide power (or stop providing power) to any device that is connected to the relay’s higher voltage wires. For this build I used a four channel relay, so it can control four devices (and potentially current from four different sources) at once. The DC pump that I used in this build is only rated for 5V, so an additional power source was not needed for the relay, and the pump run off of the Arduino’s 5V pin. 
  
  ![Relay example annotated](https://user-images.githubusercontent.com/78987271/114496421-2245a780-9bdd-11eb-951f-96e0e2d9e92d.jpg)
@@ -115,6 +118,7 @@ To water the plant, a relay board is used, controlling a DC pump. Relay boards c
 A float switch is used to control the water level, stopping the pump from running if the water reservoir is empty. The float switch is simply a piece of floating foam with an integrated magnet, which gives a digital signal (so it is attached to digital Pin 13). When the float is floating (or up), the senor gives a “HIGH” output. If the float drops to the bottom of the sensor, it gives a “LOW” output (indicating that the water level has dropped).
 
 Temperature Control Module
+
 A TMP36 temperature sensor is used to measure ambient temperature. The TMP36 produces an analog signal, and is hooked to analog Pin A1. The TMP36 also requires 5V and ground connections to function properly. In the program, code is used to convert the TMP36’s analog signal to degrees Celsius, to make reading and setting thresholds more convenient. To change the temperature, a DC fan is used. The DC fan is attached to the relay module board in the same fashion as the DC pump, expect the fan is connected to relay 2. On the Arduino, digital Pin 3 controls the fan’s relay switch. The fan is also running off of the Arduino’s provided 5V current, but I believe it could handle more power, and therefore decrease temperature quicker. However, my 2$ Princess Auto fans did not include a spec sheet, and for simplicities sake I wanted to keep the build to a single power source. 
 
 LED Light Control Module
