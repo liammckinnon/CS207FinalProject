@@ -9,16 +9,19 @@ This project was inspired by my own inability to keep plants properly watered. H
 I am not an electrical engineer or botanist. I take no responsibility for any harm that may come to person, property or botany as a result of this project.
 
 
+**Version Information*
+
+Version 4 is the current code. Found under 1_Chnl_Plant_watering_V4
 
 **Repository Contents*
 
-*/README.md -ReadMe document explaining the build
+/README.md -ReadMe document explaining the build
 
-*/hardware - Fritzing schematic for build and parts list
+/hardware - Fritzing schematic for build and parts list
 
-*/images – Pictures of the build
+/images – Pictures of the build
 
-*/Code - Archived previous versions of code
+/Code - Archived previous versions of code
 
 
 
@@ -59,6 +62,7 @@ TMP analog (middle pin) to A1
 
 
 **FUNCTIONALITY**
+
 Version 4.0
 The system’s watering control functions well. When the soil moisture sensor detects a certain level of moisture (set beforehand in the program), it turns on the pump in one second intervals and waters the plant. The pump stops when desired moisture content is exceeded. The pump will not run if the water level in the reservoir is low, as controlled by the float switch. 
 The temperature sensor reads ambient temperature and turns on the DC fan when a certain temperature level is exceeded (set beforehand in the program, in degrees Celsius). The fan turns off when desired temperature is reached. 
@@ -130,14 +134,17 @@ Temperature Control Module
 6. Upload code to board. 
 
 A note on building:
+
 To save space, I refrained from using the breadboard in my final build, and instead made several dirty splices. There is a 5V pin attached to the board with 5 wires spliced to it for the relay board, Relay1, Relay2, SM and TMP. A ground pin attaches to the board then has leads going to the relay board, SM, TMP, pump and fan. This could be done with a breadboard to avoid cutting jumper cables. 
 
 **Future Goals:**
+
 Time based LED control. An attempt was made to add a timer function (controlling relay channel 3), but it did not mesh properly with the other modules, so it was abandoned for now. 
 WiFi monitoring/data logging/control. The long term goal for this project is to have data sent to a server, accessible through an app. The app would also allow manual control of the pump/fan/lights, and an option for changing LED timers and temp/moisture thresholds. 
 
 
 Sources:
+
 WayInTop Arduino Plant Watering System:
 https://github.com/WayinTop/Automatic-Watering-System-JP
 Float Sensor:
