@@ -11,23 +11,23 @@ I am not an electrical engineer or botanist. I take no responsibility for any ha
 
 **Version Information**
 
-Version 4 is the current code. Found under 1_Chnl_Plant_watering_V4
+Version 4 is the current code. Found under /1_Chnl_Plant_watering_V4
 
 **Repository Contents**
 
-**/README.md -ReadMe document explaining the build*
+*/README.md -ReadMe document explaining the build*
 
-**/hardware - Fritzing schematic for build and parts list*
+*/hardware - Fritzing schematic for build and parts list*
 
-**/images – Pictures of the build*
+*/images – Pictures of the build*
 
-**/1_Chnl_Plant_watering - Archived version of software*
+*/1_Chnl_Plant_watering - Archived version of software*
 
-**/1_Chnl_Plant_watering_v2 - Archived version of software*
+*/1_Chnl_Plant_watering_v2 - Archived version of software*
 
-**/1_Chnl_Plant_watering_v3 - Archived version of software*
+*/1_Chnl_Plant_watering_v3 - Archived version of software*
 
-**/1_Chnl_Plant_watering_v4 - Current version of software*
+*/1_Chnl_Plant_watering_v4 - Current version of software*
 
 
 **BUILD**
@@ -69,6 +69,7 @@ TMP analog (middle pin) to A1
 **FUNCTIONALITY**
 
 Version 4.0
+
 The system’s watering control functions well. When the soil moisture sensor detects a certain level of moisture (set beforehand in the program), it turns on the pump in one second intervals and waters the plant. The pump stops when desired moisture content is exceeded. The pump will not run if the water level in the reservoir is low, as controlled by the float switch. 
 The temperature sensor reads ambient temperature and turns on the DC fan when a certain temperature level is exceeded (set beforehand in the program, in degrees Celsius). The fan turns off when desired temperature is reached. 
 The two modules mesh well together. Both will run independently or at the same time (ex. Pump will run while fan is on). The temperature control module will continue to run after the float switch stops the pump from running. 
