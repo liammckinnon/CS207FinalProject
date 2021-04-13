@@ -9,20 +9,25 @@ This project was inspired by my own inability to keep plants properly watered. H
 I am not an electrical engineer or botanist. I take no responsibility for any harm that may come to person, property or botany as a result of this project.
 
 
-**Version Information*
+**Version Information**
 
 Version 4 is the current code. Found under 1_Chnl_Plant_watering_V4
 
-**Repository Contents*
+**Repository Contents**
 
-/README.md -ReadMe document explaining the build
+**/README.md -ReadMe document explaining the build*
 
-/hardware - Fritzing schematic for build and parts list
+**/hardware - Fritzing schematic for build and parts list*
 
-/images – Pictures of the build
+**/images – Pictures of the build*
 
-/Code - Archived previous versions of code
+**/1_Chnl_Plant_watering - Archived version of software*
 
+**/1_Chnl_Plant_watering_v2 - Archived version of software*
+
+**/1_Chnl_Plant_watering_v3 - Archived version of software*
+
+**/1_Chnl_Plant_watering_v4 - Current version of software*
 
 
 **BUILD**
