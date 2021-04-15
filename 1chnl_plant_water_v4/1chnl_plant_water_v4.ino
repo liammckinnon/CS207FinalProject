@@ -53,18 +53,9 @@ void setup() {
   pinMode(WETSnsr, INPUT);
   pinMode (TMPSnsr, INPUT);
   pinMode(FLOAT_SENSOR, INPUT_PULLUP);
-
-
-
-
   digitalWrite(Relay1, HIGH); //Sets relay states to HIGH (open)
   digitalWrite (Relay2, HIGH);
   //digitalWrite (Relay3,HIGH);
-
-
-
-
-
 }
 void loop() {
 
