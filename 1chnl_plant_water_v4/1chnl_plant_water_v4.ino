@@ -37,26 +37,27 @@
 
 int WETSnsr = A0; //Analog pin for moisture sensor
 int TMPSnsr = A1; //Analog pin for temperature sensor
-int Relay1 = 2;
-int Relay2 = 3;
-//int Relay3 = 4;
-float MstLvl = 350;
-float TempLvl = 28;
+int Relay1 = 2; //Pin to control relay 1
+int Relay2 = 3; //Pin to control realy 2
+//int Relay3 = 4; //Additional relay pin (not used in this build/software). Available for module expansion. 
+float MstLvl = 350; //CHANGE THIS VARIABLE TO SET MOISTURE THRESHOLD. ~250 is max wet, ~700 is max dry. 
+float TempLvl = 28; //CHANGE THIS VARIABLE TO SET TEMPERATURE THRESHOLD. 
 
 #define FLOAT_SENSOR 13 //Float sensor setup
 
 void setup() {
   Serial.begin(9600);
-  pinMode(Relay1, OUTPUT);
-  pinMode(Relay2, OUTPUT);
-  // pinMode (Relay3, OUTPUT);
-  pinMode(WETSnsr, INPUT);
-  pinMode (TMPSnsr, INPUT);
-  pinMode(FLOAT_SENSOR, INPUT_PULLUP);
-  digitalWrite(Relay1, HIGH); //Sets relay states to HIGH (open)
-  digitalWrite (Relay2, HIGH);
-  //digitalWrite (Relay3,HIGH);
-}
+  pinMode(Relay1, OUTPUT); //Relay 1 setup
+  pinMode(Relay2, OUTPUT); //Relay 2 setup
+  // pinMode (Relay3, OUTPUT); //(Unused) Relay 3 setup
+  pinMode(WETSnsr, INPUT); //Sets soil moisture sensor as an input
+  pinMode (TMPSnsr, INPUT); //Sets temperature sensor as an input
+  pinMode(FLOAT_SENSOR, INPUT_PULLUP); //Sets float switch as a pull up button. 
+
+  digitalWrite(Relay1, HIGH); //Sets relay state to HIGH (open)
+  digitalWrite (Relay2, HIGH); //Sets relay state to HIGH (open)
+  //digitalWrite (Relay3,HIGH); //Sets relay state to HIGH (open)
+
 void loop() {
 
   float Cels; //Code to convert analog reading to degrees celsius. This should probably be handled by a seperate function.
