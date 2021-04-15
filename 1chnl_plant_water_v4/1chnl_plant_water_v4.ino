@@ -1,5 +1,5 @@
 /*
-   ROBO GARDENZILLA
+   MECHAGARDENZILLA
    An Automated Plant Watering System
    By Liam McKinnon
    200237089
