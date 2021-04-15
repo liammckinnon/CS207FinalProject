@@ -150,6 +150,17 @@ A note on building:
 
 To save space, I refrained from using the breadboard in my final build, and instead made several dirty splices. There is a 5V pin attached to the board with 5 wires spliced to it for the relay board, Relay1, Relay2, SM and TMP. A ground pin attaches to the board then has leads going to the relay board, SM, TMP, pump and fan. This could be done with a breadboard to avoid cutting jumper cables. 
 
+Video description is available at:
+
+https://vimeo.com/manage/videos/537058346
+
+
+Challenges:
+
+Building the hardware component of the system went much smoother than expected. Learning to use the relays and new sensors was not as hard as I expected. I built everything on the breadboard first, then transferred it to the spliced nest of wires. The biggest challenge I faced with building was making sure the parts that were not spliced stayed put. The 5V wires frequently popped off the board pins. On the software side, I struggled with finding ways to run multiple tasks at once. Trying to add a timer for lighting control proved to be particularly more difficult than expected. I tried to use the delay() command, but quickly learned that this puts all other tasks on hold. I began creating a timer, but ended up running out of time to complete it properly. Setting all my tasks as functions did not work as well as originally planned. I ended up putting more code into the void Loop() that I had originally hoped too. 
+
+
+
 **Future Goals:**
 
 Time based LED control. An attempt was made to add a timer function (controlling relay channel 3), but it did not mesh properly with the other modules, so it was abandoned for now. 
